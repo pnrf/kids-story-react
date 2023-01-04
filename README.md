@@ -39,23 +39,29 @@
 * Клонировать репозиторий:
 
 ```console
-    git clone https://github.com/pnrf/mesto.git
+  git clone https://github.com/pnrf/mesto.git
 ```
 
 * Установить зависимости:
 
 ```console
-    npm install
+  npm install
 ```
 
 * Собрать проект (опционально):
 
 ```console
-    npm run build
+  npm run build
 ```
 
 * Запустить проект на локальном сервере (http://localhost:3000/):
 
 ```console
-    npm start
+  npm start
+```
+
+* Запустить Storybook локально (http://localhost:6006):
+
+```console
+  npm run storybook
 ```
