@@ -7,12 +7,15 @@ import Header from '../Header/Header';
 import Main from '../Main/Main';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
+import Button from '../Button/Button';
+
 function App() {
   const [currentUser, setCurrentUser] = useState({});
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="App">
+        <Button />
         <Header />
         <Routes>
           <Route exact path="/" element={<Main />}/>
