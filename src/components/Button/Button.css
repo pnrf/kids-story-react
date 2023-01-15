@@ -1,13 +1,11 @@
 .button {
-  padding: 0;
+  padding: 10px;
+  box-sizing: border-box;
   border: none;
   border-radius: 50px;
   white-space: nowrap;
-  /* header__button */
-  background-color: #8081BD;
-  color: #fff;
-  width: 280px;
-  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -16,4 +14,49 @@
 .button:hover {
   opacity: .6;
   cursor: pointer;
+}
+
+.button_size_extra-small {
+  width: 192px;
+  height: 40px;
+}
+
+.button_size_small {
+  width: 245px;
+  height: 40px;
+}
+
+.button_size_medium {
+  width: 280px;
+  height: 40px;
+}
+
+.button_size_large {
+  width: 308px;
+  height: 40px;
+}
+
+.button_color_blue {
+  background-color: #8081BD;
+  color: #fff;
+}
+
+.button_color_white {
+  background-color: #fff;
+  color: #334155;
+  border: 1px solid rgba(128, 129, 189, 0.8);
+}
+
+.button_color_red {
+  background-color: #EA5D4A;
+  color: #fff;
+}
+
+.button_color_yellow {
+  background-color: #F6B31F;
+  color: #334155;
+}
+
+.intro__form-button {
+  text-transform: uppercase;
 }

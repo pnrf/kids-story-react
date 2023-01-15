@@ -1,61 +1,98 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 
-import Button from './Button';
+import { Button } from './Button';
 
 export default {
   title: 'Components/Button',
   component: Button,
-  argTypes: {
-    variant: {
-      type: 'string',
-      description: 'Вариант внешнего вида кнопки',
-      defaultValue: 'primary',
-      options: ['primary', 'square', 'link'],
-      control: {
-        type: 'radio'
-      }
-    },
-    type: {
-      type: 'string',
-      description: 'Тип кнопки',
-      defaultValue: 'button',
-      options: ['button', 'submit'],
-      control: {
-        type: 'radio'
-      },
-    },
-    children: {
-      type: 'string',
-      description: 'Текст кнопки',
-      name: 'label',
-      defaultValue: 'Записаться на экскурсию'
-    },
-    onClick: {
-      type: 'func',
-      description: 'Функция: клик по кнопке',
-      // control: {
-      //   type: '-'
-      // }
-    }
-  },
 };
 
-const Template = (args) => <Button {...args} />
+const Template = (args) => <Button {...args} />;
 
-export const headerButton = Template.bind({});
-headerButton.args = {
-  children: 'Записаться на экскурсию',
-  variant: 'header__button',
-}
+export const allButtons = () => (
+  <>
+    <p style={{fontFamily: 'sans-serif', fontSize: '13px', color: 'grey', margin: '0 0 20px'}}> Варианты всех кнопок на сайте: </p>
+    <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+      <Button
+        label='Записаться на экскурсию'
+        color='blue'
+        size='extra-small'
+      />
+      <Button
+        label='Записаться на экскурсию'
+        color='red'
+        size='medium'
+      />
+      <Button
+        label='Записаться на экскурсию'
+        color='white'
+        size='extra-small'
+      />
+      <Button
+        label='Записаться'
+        color='red'
+        size='large'
+        mixes='intro__form-button'
+      />
+      <Button
+        label='Записаться'
+        color='red'
+        size='small'
+        mixes='intro__form-button'
+      />
+    </div>
+  </>
+);
 
-export const formButton = Template.bind({});
-formButton.args = {
-  children: 'Записаться',
-  variant: 'form__button',
-}
+export const headerButtonDesktop = Template.bind({});
+headerButtonDesktop.args = {
+  label: 'Записаться на экскурсию',
+  color: 'blue',
+  size: 'extra-small'
+};
 
-// export const headerButton = () => <Button onClick={action('clicked')}>Записаться на экскурсию</Button>;
-// export const formButton = () => <Button onClick={action('clicked')}>Записаться</Button>;
+export const headerButtonMobile = Template.bind({});
+headerButtonMobile.args = {
+  label: 'Записаться на экскурсию',
+  color: 'red',
+  size: 'extra-small'
+};
 
+export const dropDownMobileButton = Template.bind({});
+dropDownMobileButton.args = {
+  label: 'Записаться на экскурсию',
+  color: 'white',
+  size: 'extra-small'
+};
 
+export const introSectionFormButtonDesktop = Template.bind({});
+introSectionFormButtonDesktop.args = {
+  label: 'Записаться',
+  color: 'red',
+  size: 'large',
+  mixes: 'intro__form-button'
+};
+
+export const introSectionFormButtonMobile = Template.bind({});
+introSectionFormButtonMobile.args = {
+  label: 'Записаться',
+  color: 'red',
+  size: 'small',
+  mixes: 'intro__form-button'
+};
+
+export const promoSectionFormButtonDesktop = Template.bind({});
+promoSectionFormButtonDesktop.args = {
+  label: 'Отправить',
+  color: 'yellow',
+  size: 'large',
+  mixes: 'intro__form-button'
+};
+
+export const promoSectionFormButtonMobile = Template.bind({});
+promoSectionFormButtonMobile.args = {
+  label: 'Отправить',
+  color: 'red',
+  size: 'small',
+  mixes: 'intro__form-button'
+};
